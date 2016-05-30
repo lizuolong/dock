@@ -29,8 +29,9 @@ RUN python3.4 ./xlei/get-pip.py
 RUN pip3.4 install redis && sudo pip3.4 install requests && sudo pip3.4 install flask
 
 #复制配置文件
-RUN mv /etc/nginx/sites-available/default ./
-COPY default /etc/nginx/sites-available/
+#RUN mv /etc/nginx/sites-available/default ./
+RUN chmod +x ./xlei/default
+COPY ./xlei/default /etc/nginx/sites-available/
 RUN apt-get clean
 
 #脚本加运行权限

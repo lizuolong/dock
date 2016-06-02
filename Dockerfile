@@ -34,7 +34,7 @@ COPY default /etc/nginx/sites-available/
 RUN apt-get clean
 
 #脚本加运行权限
-RUN chmod +x ./xlei/run.sh ./xlei/down.sh ./xlei/setup.sh  ./xlei/cron.sh
+RUN chmod +x ./xlei/run.sh ./xlei/setup.sh  ./xlei/cron.sh
 #redis数据库保存目录
 VOLUME ["/var/lib/redis"]
 

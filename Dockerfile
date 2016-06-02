@@ -30,8 +30,7 @@ RUN pip3.4 install redis && sudo pip3.4 install requests && sudo pip3.4 install 
 
 #复制配置文件
 RUN mv /etc/nginx/sites-available/default ./
-RUN chmod +x ./xlei/default
-COPY ./xlei/default /etc/nginx/sites-available/
+COPY default /etc/nginx/sites-available/
 RUN apt-get clean
 
 #脚本加运行权限
